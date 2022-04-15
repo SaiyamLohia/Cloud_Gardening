@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RainCloud : MonoBehaviour
 {
+    //Script on the launched cloud projectile.
+
     CloudShooter shooter;
     Rigidbody2D rb;
 
@@ -17,6 +19,8 @@ public class RainCloud : MonoBehaviour
 
         rb.AddForce(shooter.transform.forward * launchForce * 1000);
     }
+
+    //Method by Unity, run when the cloud is left clicked on. 
     private void OnMouseDown()
     {
         Vector2 pos = transform.position;

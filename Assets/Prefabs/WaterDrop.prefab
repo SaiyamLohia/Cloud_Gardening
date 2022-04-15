@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 766594973945988865}
   - component: {fileID: 2641839071232304647}
   - component: {fileID: 8308595619519266902}
+  - component: {fileID: 6341106488080006100}
   m_Layer: 0
   m_Name: WaterDrop
   m_TagString: Untagged
@@ -121,3 +122,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6341106488080006100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148465967057857303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f7746bf4c3bde2488c6dd468932fb90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
