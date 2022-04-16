@@ -23,16 +23,14 @@ public class WaterDop : MonoBehaviour
 
     private void Start()
     {
-        if(transform.parent.GetComponent<ExplodingCloud>() != null)
+        try
         {
-            RandomForce();
+            if (transform.parent.GetComponent<ExplodingCloud>() != null)
+            {
+                RandomForce();
+            }
         }
-    }
-
-    private void Update()
-    {
-        Vector3 velocity = GetComponent<Rigidbody2D>().velocity;
-        transform.rotation.SetLookRotation(velocity);
+        catch(System.NullReferenceException) { return; }
     }
 
     void RandomForce()
