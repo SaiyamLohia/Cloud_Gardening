@@ -8,31 +8,17 @@ public class CloudShooter : MonoBehaviour
     [SerializeField] GameObject rainCloud;
     [SerializeField] Camera cam;
     [SerializeField] GameObject aimArrow;
-    int cloudCount = 0;
-    [SerializeField] int cloudsAllowed = 3;
-    [SerializeField] TextMeshProUGUI cloudText;
-
-    private void Start()
-    {
-        UpdateCloudText();
-    }
+    bool hasShot = false;
     private void Update()
     {
-        if(Input.GetMouseButtonDown(1) && cloudCount < cloudsAllowed)
+        if(Input.GetMouseButtonDown(0))
         {
             Instantiate(rainCloud, transform.position, Quaternion.identity);
-            cloudCount++;
-            UpdateCloudText();
+            hasShot = true;
         }
 
         transform.LookAt(cam.ScreenToWorldPoint(Input.mousePosition));
         UpdateAimArrow();
-    }
-
-    //Updates the "Clouds Remaining" GUI element.
-    void UpdateCloudText()
-    {
-        cloudText.text = "Clouds left: " + (cloudsAllowed - cloudCount).ToString();
     }
 
     //Updates the arrow used for aiming

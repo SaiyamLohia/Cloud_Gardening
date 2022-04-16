@@ -18,12 +18,18 @@ public class RainCloud : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         rb.AddForce(shooter.transform.forward * launchForce * 1000);
+        StartCoroutine(Rain());
     }
 
-    //Method by Unity, run when the cloud is left clicked on. 
-    private void OnMouseDown()
+    private IEnumerator Rain()
     {
-        Vector2 pos = transform.position;
-        Instantiate(rainDrop, pos, Quaternion.identity);
+        List<Transform> children = new List<Transform>();
+        foreach (Transform tr in transform) children.Add(tr);
+
+        Instantiate(rainDrop, children[Random.Range(0, children.Count)].position, Quaternion.identity);
+
+        yield return new WaitForSeconds(0.1f);
+
+        StartCoroutine(Rain());
     }
 }

@@ -24,9 +24,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4409070982266311084}
-  m_LocalRotation: {x: -0, y: -0, z: -0.93349844, w: -0.35858136}
-  m_LocalPosition: {x: -2.4853163, y: 4.5410066, z: 0.1}
-  m_LocalScale: {x: 0.6807742, y: 0.663031, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.98, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8690262148663939625}
   m_RootOrder: 1
@@ -128,6 +128,8 @@ MonoBehaviour:
   rainCloud: {fileID: 7505667821610096595, guid: e9684d68277c10b4995a392150090743, type: 3}
   cam: {fileID: 0}
   aimArrow: {fileID: 4409070982266311084}
+  cloudsAllowed: 3
+  cloudText: {fileID: 0}
 --- !u!1 &8690262148663939627
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +154,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8690262148663939627}
-  m_LocalRotation: {x: -0, y: -0, z: 0.93349844, w: -0.35858136}
+  m_LocalRotation: {x: 0, y: -0, z: 0.93349916, w: -0.3585797}
   m_LocalPosition: {x: -7.5, y: 3.5, z: -0.1}
   m_LocalScale: {x: 1.298887, y: 1.6782541, z: 1}
   m_Children:
@@ -200,7 +202,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: c8d708a09e1299542b720065266d0b35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
