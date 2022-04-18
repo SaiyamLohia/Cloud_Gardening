@@ -11,7 +11,7 @@ public class CloudShooter : MonoBehaviour
     bool hasShot = false;
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !hasShot)
         {
             Instantiate(rainCloud, transform.position, Quaternion.identity);
             hasShot = true;
